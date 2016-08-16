@@ -1,0 +1,136 @@
+---
+title       : Hair-Eye Color Mix App.
+subtitle    : Analysis of HairEyeColor Dataset
+author      : Elly Alam
+job         : Data Science Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Presentation Headlines
+ ![alt text](blueeye.png)
+
+> 1. About Hair-Eye Color Mix App
+> 2. About the Hair-Eye Dataset
+> 3. Two main parts of any Shiny App
+> 4. Where can you learn all about these cool stuff
+
+---.class1 #id1 bg:yellow 
+
+## About The Hair-Eye Color App 
+
+
+* This App is part of the assignment for  "Developing Data Products" course 
+
+* The app is developed using "Shiny" package in R.
+
+* The app works based on HairEyeColor dataset in R packages
+
+* The app consisits of 2 "Shiny"" files (ui.R and server.R) and 2 function files
+
+* The app explores the distribution of poeple's Hair-Eye color mixture
+
+* The app URL link is [Here](https://ellyshinyapps.shinyapps.io/HairEyeColorExplorer/) 
+
+--- &twocol bg:yellow
+
+## About the Hair-Eye Dataset
+
+*** =left 
+
+> * The dataset is a 3-dimensional array resulting from cross-tabulating 592 observations on 3 variables.
+
+> * The variables and their levels are as follows:
+
+>  No |	Name  |	 Levels
+  ----| ------|-------------------------
+   1  |	Hair 	| Black, Brown, Red, Blond
+   2  |	Eye   |	Brown, Blue, Hazel, Green
+   3  |	Sex 	| Male, Female 
+   
+*** =right
+
+```{r,echo=FALSE,fig.show='asis'}
+library(reshape2)
+mm = melt(HairEyeColor)
+mm <- within(mm, {
+  color <- tolower(Hair)
+  color <- ifelse(color == 'blond', 'yellow', color)
+  color1 <- tolower(Eye)
+  color1 <- ifelse(color1 == 'hazel', 'gold', color1)
+  value <- value / 2
+  value1 <- value
+})
+
+mm <- melt(mm, id.vars = -(4:5))
+cols <- c(apply(mm[1:16, c('color','color1')], 1, c))
+
+library(ggplot2)
+ggplot(data = mm, aes(x = interaction(Hair, Eye), y = value, fill = interaction(variable, interaction(Hair, Eye)))) +
+  geom_bar(stat = 'identity') + facet_grid(Sex ~ .) + 
+  theme(legend.position = 'none') + scale_fill_manual(values = cols)
+
+```
+
+---&twocol bg:yellow
+## Two main parts of any Shiny App
+
+*** =left 
+ 
+* ui.r file: 
+   
+  + contains the "User Interface" script
+ 
+* Some User Interface widgets:
+  
+ + Action Button
+ + A group of check boxes
+ + A calendar to aid date selection
+ + A file upload control wizard
+ + A field to enter numbers
+ + A set of radio buttons
+ + A field to enter text
+ + A submit button
+ 
+*** =right 
+
+* server.r file:
+ 
+  + contains the "Server" script
+
+  + script contains the instructions that your computer needs to build your app
+
+  + Shiny server lets user manipulate the data
+
+  + Shiny server lets users sort, filter, or change assumptions in real-time 
+
+  + Shiny server empower users to customize analysis for their specific needs
+
+
+
+---.class1 #id1 bg:yellow 
+
+## Was that cool?
+
+
+you can learn about all "Data Products" such as:
+
+> * Shiny Apps
+
+> * Rmarkdown Reproducable Reports
+
+> * Slidify Presentations
+
+> * Rstudio Presenter
+
+> * RCharts
+
+>   and a lot more in:
+
+>             "Data Science Specialization" offered by "coursera.org"
+
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hair-Eye Color Mix App.</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Hair-Eye Color Mix App.">
+  <meta name="author" content="Elly Alam">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Hair-Eye Color Mix App.</h1>
+    <h2>Analysis of HairEyeColor Dataset</h2>
+    <p>Elly Alam<br/>Data Science Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Presentation Headlines</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="blueeye.png" alt="alt text"></p>
+
+<ol class = "build incremental">
+<li>About Hair-Eye Color Mix App</li>
+<li>About the Hair-Eye Dataset</li>
+<li>Two main parts of any Shiny App</li>
+<li>Where can you learn all about these cool stuff</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class1" id="id1" style="background:yellow;">
+  <hgroup>
+    <h2>About The Hair-Eye Color App</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This App is part of the assignment for  &quot;Developing Data Products&quot; course </p></li>
+<li><p>The app is developed using &quot;Shiny&quot; package in R.</p></li>
+<li><p>The app works based on HairEyeColor dataset in R packages</p></li>
+<li><p>The app consisits of 2 &quot;Shiny&quot;&quot; files (ui.R and server.R) and 2 function files</p></li>
+<li><p>The app explores the distribution of poeple&#39;s Hair-Eye color mixture</p></li>
+<li><p>The app URL link is <a href="https://ellyshinyapps.shinyapps.io/HairEyeColorExplorer/">Here</a> </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:yellow;">
+  <hgroup>
+    <h2>About the Hair-Eye Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul class = "build incremental">
+<li><p>The dataset is a 3-dimensional array resulting from cross-tabulating 592 observations on 3 variables.</p></li>
+<li><p>The variables and their levels are as follows:</p>
+
+<table><thead>
+<tr>
+<th>No</th>
+<th>Name</th>
+<th>Levels</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Hair</td>
+<td>Black, Brown, Red, Blond</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Eye</td>
+<td>Brown, Blue, Hazel, Green</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sex</td>
+<td>Male, Female</td>
+</tr>
+</tbody></table></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="figure/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:yellow;">
+  <hgroup>
+    <h2>Two main parts of any Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li><p>ui.r file: </p>
+
+<ul>
+<li>contains the &quot;User Interface&quot; script</li>
+</ul></li>
+<li><p>Some User Interface widgets:</p>
+
+<ul>
+<li>Action Button</li>
+<li>A group of check boxes</li>
+<li>A calendar to aid date selection</li>
+<li>A file upload control wizard</li>
+<li>A field to enter numbers</li>
+<li>A set of radio buttons</li>
+<li>A field to enter text</li>
+<li>A submit button</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li><p>server.r file:</p>
+
+<ul>
+<li>contains the &quot;Server&quot; script</li>
+<li>script contains the instructions that your computer needs to build your app</li>
+<li>Shiny server lets user manipulate the data</li>
+<li>Shiny server lets users sort, filter, or change assumptions in real-time </li>
+<li>Shiny server empower users to customize analysis for their specific needs</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class1" id="id1" style="background:yellow;">
+  <hgroup>
+    <h2>Was that cool?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>you can learn about all &quot;Data Products&quot; such as:</p>
+
+<ul class = "build incremental">
+<li><p>Shiny Apps</p></li>
+<li><p>Rmarkdown Reproducable Reports</p></li>
+<li><p>Slidify Presentations</p></li>
+<li><p>Rstudio Presenter</p></li>
+<li><p>RCharts</p>
+
+<p>and a lot more in:</p>
+
+<pre><code>    &quot;Data Science Specialization&quot; offered by &quot;coursera.org&quot;
+</code></pre></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Presentation Headlines'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='About The Hair-Eye Color App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='About the Hair-Eye Dataset'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Two main parts of any Shiny App'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Was that cool?'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
